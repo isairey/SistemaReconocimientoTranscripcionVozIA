@@ -163,7 +163,7 @@ El modelo fue entrenado utilizando enormes cantidades de datos de audio y lengua
 # 📂 Estructura del proyecto
 
 ```bash
-WhisperAI/
+SistemaReconocimientoTranscripcionVozIA/
 │
 ├── whisper/                 # Código principal del modelo
 ├── notebooks/               # Ejemplos en Jupyter
@@ -196,7 +196,7 @@ WhisperAI/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/openai/whisper.git
+git clone https://github.com/isairey/SistemaReconocimientoTranscripcionVozIA.git
 ```
 
 ---
@@ -204,7 +204,7 @@ git clone https://github.com/openai/whisper.git
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd whisper
+cd SistemaReconocimientoTranscripcionVozIA
 ```
 
 ---
@@ -212,7 +212,7 @@ cd whisper
 ## 3️⃣ Instalar dependencias
 
 ```bash
-pip install git+https://github.com/openai/whisper.git
+pip install git+https://github.com/isairey/SistemaReconocimientoTranscripcionVozIA.git
 ```
 
 ---
@@ -416,7 +416,7 @@ git push origin feature/nueva-funcionalidad
 
 <div align="center">
 
-## OpenAI — Artificial Intelligence Research
+## Isai Reyes — Artificial Intelligence Research
 
 Proyecto enfocado en reconocimiento de voz, inteligencia artificial y procesamiento avanzado de lenguaje natural 🚀
 
