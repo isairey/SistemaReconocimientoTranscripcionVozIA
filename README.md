@@ -1,139 +1,445 @@
-# Whisper
+# README.md
 
-[[Blog]](https://openai.com/blog/whisper)
-[[Paper]](https://cdn.openai.com/papers/whisper.pdf)
-[[Model card]](model-card.md)
-[[Colab example]](https://colab.research.google.com/github/openai/whisper/blob/master/notebooks/LibriSpeech.ipynb)
+<div align="center">
 
-Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition as well as speech translation and language identification.
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" />
 
+# 🎙️ Whisper AI Speech Recognition
 
-## Approach
+### Sistema avanzado de reconocimiento y transcripción de voz con IA 🚀
 
-![Approach](approach.png)
+<p align="center">
+  <b>Whisper</b> es un modelo de reconocimiento automático de voz desarrollado para transcribir audio, traducir idiomas y detectar lenguaje utilizando inteligencia artificial avanzada basada en Transformers.
+</p>
 
-A Transformer sequence-to-sequence model is trained on various speech processing tasks, including multilingual speech recognition, speech translation, spoken language identification, and voice activity detection. All of these tasks are jointly represented as a sequence of tokens to be predicted by the decoder, allowing for a single model to replace many different stages of a traditional speech processing pipeline. The multitask training format uses a set of special tokens that serve as task specifiers or classification targets.
+<p align="center">
+  <img src="https://img.shields.io/badge/OpenAI-Whisper-412991?style=for-the-badge&logo=openai&logoColor=white">
+  <img src="https://img.shields.io/badge/Python-AI-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/PyTorch-DeepLearning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/Transformer-SpeechRecognition-FF6F00?style=for-the-badge">
+</p>
 
+<p align="center">
+  <a href="#-acerca-del-proyecto">Acerca</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-modelos-disponibles">Modelos</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-uso">Uso</a>
+</p>
 
-## Setup
+</div>
 
-We used Python 3.9.9 and [PyTorch](https://pytorch.org/) 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.7 or later and recent PyTorch versions. The codebase also depends on a few Python packages, most notably [HuggingFace Transformers](https://huggingface.co/docs/transformers/index) for their fast tokenizer implementation and [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) for reading audio files. The following command will pull and install the latest commit from this repository, along with its Python dependencies 
+---
 
-    pip install git+https://github.com/openai/whisper.git 
+# 🌌 Acerca del proyecto
 
-It also requires the command-line tool [`ffmpeg`](https://ffmpeg.org/) to be installed on your system, which is available from most package managers:
+**Whisper AI Speech Recognition** es un sistema de reconocimiento de voz basado en inteligencia artificial capaz de:
+
+- 🎤 Transcribir audio automáticamente
+- 🌍 Detectar múltiples idiomas
+- 🔄 Traducir voz a inglés
+- 🧠 Procesar lenguaje natural
+- 📡 Analizar audio en tiempo real
+- ⚡ Ejecutar inferencias con modelos Transformer
+- 🗣️ Reconocer voz multilenguaje
+- 🤖 Integrarse con aplicaciones de IA
+
+El modelo fue entrenado utilizando enormes cantidades de datos de audio y lenguaje para ofrecer resultados precisos y robustos.
+
+---
+
+# ✨ Características
+
+## 🎙️ Reconocimiento de voz
+
+- 📢 Transcripción automática
+- 🌐 Soporte multilenguaje
+- ⚡ Alta precisión
+- 🧠 IA basada en Transformers
+- 🔊 Procesamiento de audio avanzado
+
+---
+
+## 🌍 Traducción y detección de idiomas
+
+- 🇯🇵 Japonés
+- 🇪🇸 Español
+- 🇺🇸 Inglés
+- 🇫🇷 Francés
+- 🇩🇪 Alemán
+- 🌎 Más de 90 idiomas compatibles
+
+---
+
+## ⚙️ Inteligencia artificial
+
+- 🤖 Deep Learning
+- 🧠 Modelos Transformer
+- 🔍 Detección automática de idioma
+- 📊 Procesamiento de secuencias
+- 🚀 Optimización GPU
+
+---
+
+## 🔥 Rendimiento avanzado
+
+- ⚡ Procesamiento rápido
+- 💾 Diferentes tamaños de modelo
+- 🎯 Balance entre velocidad y precisión
+- 📈 Escalable para producción
+- 🔄 Compatible con CPU y GPU
+
+---
+
+# 🧠 Arquitectura del sistema
+
+## ⚙️ Pipeline de procesamiento
+
+1️⃣ Carga del archivo de audio  
+2️⃣ Conversión a espectrograma Mel  
+3️⃣ Procesamiento con Transformer  
+4️⃣ Detección de idioma  
+5️⃣ Decodificación de voz  
+6️⃣ Generación del texto final  
+
+---
+
+# 📊 Modelos disponibles
+
+| Modelo | Parámetros | VRAM Aproximada | Velocidad |
+|--------|-------------|----------------|------------|
+| Tiny | 39M | ~1 GB | ~32x |
+| Base | 74M | ~1 GB | ~16x |
+| Small | 244M | ~2 GB | ~6x |
+| Medium | 769M | ~5 GB | ~2x |
+| Large | 1550M | ~10 GB | ~1x |
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+## 🧠 Inteligencia Artificial
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,pytorch" />
+</p>
+
+- Python
+- PyTorch
+- Transformers
+- Deep Learning
+- Machine Learning
+
+---
+
+## 🔊 Procesamiento de audio
+
+<p>
+  <img src="https://skillicons.dev/icons?i=linux" />
+</p>
+
+- FFmpeg
+- Audio Processing
+- Mel Spectrograms
+- Speech Recognition
+- Voice Detection
+
+---
+
+## 🧰 Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode" />
+</p>
+
+- Git
+- GitHub
+- VS Code
+- Jupyter Notebook
+- Python Pip
+
+---
+
+# 📂 Estructura del proyecto
 
 ```bash
-# on Ubuntu or Debian
+WhisperAI/
+│
+├── whisper/                 # Código principal del modelo
+├── notebooks/               # Ejemplos en Jupyter
+├── audio_samples/           # Archivos de prueba
+├── models/                  # Modelos descargados
+├── scripts/                 # Scripts auxiliares
+├── tests/                   # Pruebas
+├── requirements.txt
+├── setup.py
+├── LICENSE
+└── README.md
+```
+
+---
+
+# ⚡ Instalación
+
+## 📋 Requisitos
+
+- Python 3.7+
+- Pip
+- FFmpeg
+- GPU opcional (CUDA)
+- PyTorch
+
+---
+
+# 🚀 Configuración del proyecto
+
+## 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/openai/whisper.git
+```
+
+---
+
+## 2️⃣ Entrar al proyecto
+
+```bash
+cd whisper
+```
+
+---
+
+## 3️⃣ Instalar dependencias
+
+```bash
+pip install git+https://github.com/openai/whisper.git
+```
+
+---
+
+## 4️⃣ Instalar FFmpeg
+
+### Ubuntu / Debian
+
+```bash
 sudo apt update && sudo apt install ffmpeg
-
-# on Arch Linux
-sudo pacman -S ffmpeg
-
-# on MacOS using Homebrew (https://brew.sh/)
-brew install ffmpeg
-
-# on Windows using Chocolatey (https://chocolatey.org/)
-choco install ffmpeg
-
-# on Windows using Scoop (https://scoop.sh/)
-scoop install ffmpeg
 ```
 
-You may need [`rust`](http://rust-lang.org) installed as well, in case [tokenizers](https://pypi.org/project/tokenizers/) does not provide a pre-built wheel for your platform. If you see installation errors during the `pip install` command above, please follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install Rust development environment. Additionally, you may need to configure the `PATH` environment variable, e.g. `export PATH="$HOME/.cargo/bin:$PATH"`. If the installation fails with `No module named 'setuptools_rust'`, you need to install `setuptools_rust`, e.g. by running:
+### Arch Linux
 
 ```bash
-pip install setuptools-rust
+sudo pacman -S ffmpeg
 ```
 
+### MacOS
 
-## Available models and languages
+```bash
+brew install ffmpeg
+```
 
-There are five model sizes, four with English-only versions, offering speed and accuracy tradeoffs. Below are the names of the available models and their approximate memory requirements and relative speed. 
+### Windows (Chocolatey)
 
+```bash
+choco install ffmpeg
+```
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
-|:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
-| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+---
 
-For English-only applications, the `.en` models tend to perform better, especially for the `tiny.en` and `base.en` models. We observed that the difference becomes less significant for the `small.en` and `medium.en` models.
+# 🎤 Uso desde terminal
 
-Whisper's performance varies widely depending on the language. The figure below shows a WER breakdown by languages of Fleurs dataset, using the `large` model. More WER and BLEU scores corresponding to the other models and datasets can be found in Appendix D in [the paper](https://cdn.openai.com/papers/whisper.pdf).
+## Transcribir audio
 
-![WER breakdown by language](language-breakdown.svg)
+```bash
+whisper audio.mp3
+```
 
+---
 
+## Usar modelo específico
 
-## Command-line usage
+```bash
+whisper audio.mp3 --model medium
+```
 
-The following command will transcribe speech in audio files, using the `medium` model:
+---
 
-    whisper audio.flac audio.mp3 audio.wav --model medium
+## Traducir audio
 
-The default setting (which selects the `small` model) works well for transcribing English. To transcribe an audio file containing non-English speech, you can specify the language using the `--language` option:
+```bash
+whisper japanese.wav --language Japanese --task translate
+```
 
-    whisper japanese.wav --language Japanese
+---
 
-Adding `--task translate` will translate the speech into English:
+## Mostrar ayuda
 
-    whisper japanese.wav --language Japanese --task translate
+```bash
+whisper --help
+```
 
-Run the following to view all available options:
+---
 
-    whisper --help
+# 🐍 Uso con Python
 
-See [tokenizer.py](whisper/tokenizer.py) for the list of all available languages.
-
-
-## Python usage
-
-Transcription can also be performed within Python: 
+## Ejemplo básico
 
 ```python
 import whisper
 
 model = whisper.load_model("base")
+
 result = model.transcribe("audio.mp3")
+
 print(result["text"])
 ```
 
-Internally, the `transcribe()` method reads the entire file and processes the audio with a sliding 30-second window, performing autoregressive sequence-to-sequence predictions on each window.
+---
 
-Below is an example usage of `whisper.detect_language()` and `whisper.decode()` which provide lower-level access to the model.
+## Detectar idioma
 
 ```python
 import whisper
 
 model = whisper.load_model("base")
 
-# load audio and pad/trim it to fit 30 seconds
 audio = whisper.load_audio("audio.mp3")
 audio = whisper.pad_or_trim(audio)
 
-# make log-Mel spectrogram and move to the same device as the model
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
-# detect the spoken language
 _, probs = model.detect_language(mel)
-print(f"Detected language: {max(probs, key=probs.get)}")
 
-# decode the audio
-options = whisper.DecodingOptions()
-result = whisper.decode(model, mel, options)
-
-# print the recognized text
-print(result.text)
+print(max(probs, key=probs.get))
 ```
 
-## More examples
+---
 
-Please use the [🙌 Show and tell](https://github.com/openai/whisper/discussions/categories/show-and-tell) category in Discussions for sharing more example usages of Whisper and third-party extensions such as web demos, integrations with other tools, ports for different platforms, etc.
+# 📈 Funcionalidades principales
 
+## 🎙️ Speech Recognition
 
-## License
+- Reconocimiento automático
+- Transcripción precisa
+- Procesamiento de voz
+- Detección de lenguaje
 
-The code and the model weights of Whisper are released under the MIT License. See [LICENSE](LICENSE) for further details.
+---
+
+## 🌍 Traducción
+
+- Traducción automática
+- Conversión multilenguaje
+- Interpretación de voz
+
+---
+
+## ⚡ IA y Deep Learning
+
+- Transformers
+- Redes neuronales
+- NLP
+- Machine Learning
+
+---
+
+# 🧪 Aplicaciones
+
+## 🚀 Casos de uso
+
+- Subtítulos automáticos
+- Asistentes virtuales
+- Traducción en tiempo real
+- Chatbots con voz
+- Sistemas de accesibilidad
+- Transcripción de reuniones
+- Automatización empresarial
+
+---
+
+# 🧠 Objetivos del proyecto
+
+## 🎯 Aprendizaje y desarrollo
+
+- Inteligencia Artificial
+- Speech Recognition
+- Deep Learning
+- Transformers
+- NLP
+- Procesamiento de audio
+- Machine Learning
+
+---
+
+# 🚧 Roadmap
+
+## 🔮 Próximas mejoras
+
+- ⚡ Inferencia más rápida
+- 🌐 Más idiomas
+- 📱 Integración móvil
+- 🤖 Mejoras de IA
+- 🔊 Audio en tiempo real
+- ☁️ Deploy cloud
+- 🎧 Streaming de audio
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Fork del proyecto
+
+```bash
+git checkout -b feature/nueva-funcionalidad
+```
+
+2. Commit
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+3. Push
+
+```bash
+git push origin feature/nueva-funcionalidad
+```
+
+4. Pull Request 🚀
+
+---
+
+# 👨‍💻 Desarrollador
+
+<div align="center">
+
+## OpenAI — Artificial Intelligence Research
+
+Proyecto enfocado en reconocimiento de voz, inteligencia artificial y procesamiento avanzado de lenguaje natural 🚀
+
+</div>
+
+---
+
+# 🌟 Apoya el proyecto
+
+⭐ Dale una estrella  
+🍴 Haz fork  
+📢 Comparte el proyecto  
+
+---
+
+# 📜 Licencia
+
+Proyecto open source bajo licencia MIT orientado al desarrollo de sistemas de reconocimiento de voz e inteligencia artificial.
+
+---
+
+<div align="center">
+
+### 🎙️ Whisper AI Speech Recognition — inteligencia artificial avanzada para voz y lenguaje 🚀
+
+</div>
